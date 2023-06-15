@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="_MyLayout.master.cs" Inherits="ASP_WebForms_WebTinTuc._MyLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap">
+    <link rel="stylesheet" href="/Style/reset.css" />
+    <link rel="stylesheet" href="/Style/main.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+    <%-- Phần đầu trang --%>
+    <header>
+      <nav id="nav_header" class="nav">
+      <div class="nav_container">
+        <div class="nav_content">
+          <a class="nav_content_link" href="index">Lê Thanh An</a>
+          <p class="nav_date" id="current_date" ></p>
+        </div>
+
+        <div class="nav_content_login">
+
+          <div class="nav_menu_admin">
+            <a class="nav_content_link" href="NewsCreate">Thêm bài viết mới</a>
+            <a class="nav_content_link" href="NewsManager">Quản lý bài viết</a>
+          </div>
+
+            <div class="nav_search">
+                <asp:TextBox ID="txtSearch" placeholder="Tìm Kiếm" class="nav_search_text" runat="server"></asp:TextBox>
+            </div>
+
+          <a class="Name_user" title="Đăng Xuất Tài Khoản" href="#" onclick="logout()" >Lê Thanh An</a>
+          <a class="nav_link_login" href="Newslogin">Đăng Nhập</a>
+
+        </div>
+
+      </div>
+    </nav>
+
+    <div id="nav_menu" class="nav">
+      <div class="nav_container">
+        <div class="nav_menu">
+          <ul class="nav_menu_list">
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Thời sự</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Góc nhìn</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Chính trị</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Thế giới</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Kinh doanh</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Bất động sản</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Khoa học</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Giải trí</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Thể thao</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Pháp luật</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Giáo dục</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Sức khoẻ</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Đời sống</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Du lịch</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Số hoá</a>
+            </li>
+            <li class="nav_menu_item">
+              <a class="nav_menu_link" href="<%# "NewsFilterChuDe.aspx?id=" + Eval("Id") %>">Tâm sự</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Đoạn script đặt position fixed cho nav -->
+    <script>
+        var nav_header = document.getElementById('nav_header');
+        var nav_menu = document.getElementById('nav_menu');
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > nav_header.offsetHeight) {
+                nav_menu.style.position = 'fixed';
+                nav_menu.style.paddingTop = '10px';
+                nav_menu.style.top = '0';
+            } else {
+                nav_menu.style.position = 'relative';
+                nav_menu.style.paddingTop = '0';
+            }
+        });
+    </script>
+    </header>
+
+    <%--Phần nội dung chính--%>
+    <main>
+        <div class="grid">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </main>
+
+    <%-- Phần chân trang --%>
+    <footer style="margin-top: 50px">
+        <div class="footer_container">
+      <div class="footer_content">
+      </div>
+    </div>
+    <div class="footer_desc">
+      <div class="footer_description">Copyrights © 2023. All rights reserved by An Lê</div>
+    </div>
+    </footer>
+
+  </form>
+
+    <script src="/JavaScript/main.js"></script>
+</body>
+</html>

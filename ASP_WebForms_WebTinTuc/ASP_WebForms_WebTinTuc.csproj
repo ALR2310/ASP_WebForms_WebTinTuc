@@ -124,6 +124,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="JavaScript\main.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -180,10 +181,22 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Style\main.css" />
+    <Content Include="Style\reset.css" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\Index.aspx" />
+    <Content Include="Views\NewsCreate.aspx" />
+    <Content Include="Views\NewsDelete.aspx" />
+    <Content Include="Views\NewsDetails.aspx" />
+    <Content Include="Views\NewsEdit.aspx" />
+    <Content Include="Views\NewsFilterChuDe.aspx" />
+    <Content Include="Views\NewsLogin.aspx" />
+    <Content Include="Views\NewsManager.aspx" />
+    <Content Include="Views\NewsRegister.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="_MyLayout.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -222,15 +235,87 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsCreate.aspx.cs">
+      <DependentUpon>NewsCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsCreate.aspx.designer.cs">
+      <DependentUpon>NewsCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsDelete.aspx.cs">
+      <DependentUpon>NewsDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsDelete.aspx.designer.cs">
+      <DependentUpon>NewsDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsDetails.aspx.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsDetails.aspx.designer.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsEdit.aspx.cs">
+      <DependentUpon>NewsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsEdit.aspx.designer.cs">
+      <DependentUpon>NewsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsFilterChuDe.aspx.cs">
+      <DependentUpon>NewsFilterChuDe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsFilterChuDe.aspx.designer.cs">
+      <DependentUpon>NewsFilterChuDe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsLogin.aspx.cs">
+      <DependentUpon>NewsLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsLogin.aspx.designer.cs">
+      <DependentUpon>NewsLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsManager.aspx.cs">
+      <DependentUpon>NewsManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsManager.aspx.designer.cs">
+      <DependentUpon>NewsManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsRegister.aspx.cs">
+      <DependentUpon>NewsRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\NewsRegister.aspx.designer.cs">
+      <DependentUpon>NewsRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_MyLayout.Master.cs">
+      <DependentUpon>_MyLayout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_MyLayout.Master.designer.cs">
+      <DependentUpon>_MyLayout.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
